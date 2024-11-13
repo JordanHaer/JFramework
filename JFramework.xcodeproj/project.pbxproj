@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F04A47702CE544CC0054D9A6 /* JFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A47652CE544CC0054D9A6 /* JFramework.framework */; };
+		F04A47942CE549A90054D9A6 /* JDependency in Frameworks */ = {isa = PBXBuildFile; productRef = F04A47932CE549A90054D9A6 /* JDependency */; };
+		F04A47952CE549B10054D9A6 /* JDependency in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F04A47932CE549A90054D9A6 /* JDependency */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,6 +21,20 @@
 			remoteInfo = JFramework;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F04A47962CE549B10054D9A6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F04A47952CE549B10054D9A6 /* JDependency in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F04A47652CE544CC0054D9A6 /* JFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04A47942CE549A90054D9A6 /* JDependency in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +126,7 @@
 				F04A47612CE544CC0054D9A6 /* Sources */,
 				F04A47622CE544CC0054D9A6 /* Frameworks */,
 				F04A47632CE544CC0054D9A6 /* Resources */,
+				F04A47962CE549B10054D9A6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -119,6 +137,7 @@
 			);
 			name = JFramework;
 			packageProductDependencies = (
+				F04A47932CE549A90054D9A6 /* JDependency */,
 			);
 			productName = JFramework;
 			productReference = F04A47652CE544CC0054D9A6 /* JFramework.framework */;
@@ -174,6 +193,9 @@
 			);
 			mainGroup = F04A475B2CE544CC0054D9A6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F04A47662CE544CC0054D9A6 /* Products */;
 			projectDirPath = "";
@@ -248,7 +270,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Haer.Jordan.JFramework;
@@ -256,7 +278,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -281,7 +303,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Haer.Jordan.JFramework;
@@ -289,7 +311,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -426,7 +448,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XV35KG5989;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Haer.Jordan.JFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -442,7 +464,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XV35KG5989;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Haer.Jordan.JFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -482,6 +504,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JordanHaer/JDependency";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F04A47932CE549A90054D9A6 /* JDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */;
+			productName = JDependency;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F04A475C2CE544CC0054D9A6 /* Project object */;
 }
