@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F96AAC62-F355-4823-B39D-CFBA62B6A555",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:JFramework.xcodeproj",
+        "identifier" : "F04A476E2CE544CC0054D9A6",
+        "name" : "JFrameworkTests"
+      }
+    }
+  ],
+  "version" : 1
+}

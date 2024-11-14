@@ -10,6 +10,7 @@
 		F04A47702CE544CC0054D9A6 /* JFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A47652CE544CC0054D9A6 /* JFramework.framework */; };
 		F04A47942CE549A90054D9A6 /* JDependency in Frameworks */ = {isa = PBXBuildFile; productRef = F04A47932CE549A90054D9A6 /* JDependency */; };
 		F04A47952CE549B10054D9A6 /* JDependency in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F04A47932CE549A90054D9A6 /* JDependency */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F0A726DC2CE5755C003E916B /* JFramework.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = F0A726DB2CE5755C003E916B /* JFramework.xctestplan */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		F04A47652CE544CC0054D9A6 /* JFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04A476F2CE544CC0054D9A6 /* JFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A726DB2CE5755C003E916B /* JFramework.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = JFramework.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -92,6 +94,7 @@
 			children = (
 				F04A47672CE544CC0054D9A6 /* JFramework */,
 				F04A47732CE544CC0054D9A6 /* JFrameworkTests */,
+				F0A726DB2CE5755C003E916B /* JFramework.xctestplan */,
 				F04A47662CE544CC0054D9A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F0A726DA2CE57407003E916B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F04A47672CE544CC0054D9A6 /* JFramework */,
@@ -195,6 +199,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */,
+				F0A726D82CE573CE003E916B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F04A47662CE544CC0054D9A6 /* Products */;
@@ -212,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A726DC2CE5755C003E916B /* JFramework.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +252,10 @@
 			isa = PBXTargetDependency;
 			target = F04A47642CE544CC0054D9A6 /* JFramework */;
 			targetProxy = F04A47712CE544CC0054D9A6 /* PBXContainerItemProxy */;
+		};
+		F0A726DA2CE57407003E916B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = F0A726D92CE57407003E916B /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -514,6 +524,14 @@
 				kind = branch;
 			};
 		};
+		F0A726D82CE573CE003E916B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.57.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -521,6 +539,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */;
 			productName = JDependency;
+		};
+		F0A726D92CE57407003E916B /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0A726D82CE573CE003E916B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
