@@ -1,8 +1,9 @@
-internal import JDependency
-
+/// This is the entry point of the framework
 public enum Framework {
+
+    /// This is the name of the framework
     public static let name = "JFramework"
+
+    /// This is the version of the framework
     public static let version = "0.0.1"
-    public static let dependencyName = Library.name
-    public static let dependencyVersion = Library.version
 }

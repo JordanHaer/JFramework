@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F02180932CF28CED00ED35E2 /* snippet-extract in Frameworks */ = {isa = PBXBuildFile; productRef = F02180922CF28CED00ED35E2 /* snippet-extract */; };
 		F04A47702CE544CC0054D9A6 /* JFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A47652CE544CC0054D9A6 /* JFramework.framework */; };
-		F04A47942CE549A90054D9A6 /* JDependency in Frameworks */ = {isa = PBXBuildFile; productRef = F04A47932CE549A90054D9A6 /* JDependency */; };
-		F04A47952CE549B10054D9A6 /* JDependency in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F04A47932CE549A90054D9A6 /* JDependency */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F0A726DC2CE5755C003E916B /* JFramework.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = F0A726DB2CE5755C003E916B /* JFramework.xctestplan */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F04A47952CE549B10054D9A6 /* JDependency in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F04A47942CE549A90054D9A6 /* JDependency in Frameworks */,
+				F02180932CF28CED00ED35E2 /* snippet-extract in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +139,7 @@
 			);
 			name = JFramework;
 			packageProductDependencies = (
-				F04A47932CE549A90054D9A6 /* JDependency */,
+				F02180922CF28CED00ED35E2 /* snippet-extract */,
 			);
 			productName = JFramework;
 			productReference = F04A47652CE544CC0054D9A6 /* JFramework.framework */;
@@ -198,8 +196,8 @@
 			mainGroup = F04A475B2CE544CC0054D9A6;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */,
 				F0A726D82CE573CE003E916B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				F02180912CF28CED00ED35E2 /* XCRemoteSwiftPackageReference "swift-docc-plugin" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F04A47662CE544CC0054D9A6 /* Products */;
@@ -516,12 +514,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */ = {
+		F02180912CF28CED00ED35E2 /* XCRemoteSwiftPackageReference "swift-docc-plugin" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JordanHaer/JDependency";
+			repositoryURL = "https://github.com/apple/swift-docc-plugin";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.3;
 			};
 		};
 		F0A726D82CE573CE003E916B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
@@ -535,10 +533,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F04A47932CE549A90054D9A6 /* JDependency */ = {
+		F02180922CF28CED00ED35E2 /* snippet-extract */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F04A47922CE549A90054D9A6 /* XCRemoteSwiftPackageReference "JDependency" */;
-			productName = JDependency;
+			package = F02180912CF28CED00ED35E2 /* XCRemoteSwiftPackageReference "swift-docc-plugin" */;
+			productName = "snippet-extract";
 		};
 		F0A726D92CE57407003E916B /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;

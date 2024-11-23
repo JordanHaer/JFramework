@@ -1,13 +1,22 @@
 {
-  "originHash" : "f34dcbba8665dbb91fb31a85fbe93e9e35ac83ad4c9a1285ccca22afe4cb3825",
+  "originHash" : "e382a87ece488b886fbf63ec12405b6fa4dde9621a8b7885116854c8676ddbfa",
   "pins" : [
     {
-      "identity" : "jdependency",
+      "identity" : "swift-docc-plugin",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/JordanHaer/JDependency",
+      "location" : "https://github.com/apple/swift-docc-plugin",
       "state" : {
-        "branch" : "main",
-        "revision" : "3936c1c30f12012bb1ebec0309842af01af2e56a"
+        "revision" : "85e4bb4e1cd62cec64a4b8e769dcefdf0c5b9d64",
+        "version" : "1.4.3"
+      }
+    },
+    {
+      "identity" : "swift-docc-symbolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-docc-symbolkit",
+      "state" : {
+        "revision" : "b45d1f2ed151d057b54504d653e0da5552844e34",
+        "version" : "1.0.0"
       }
     },
     {
