@@ -1,39 +1,41 @@
 #!/bin/bash
 
-# Define variables
-FRAMEWORK_NAME="JFramework"
-BUILD_DIR="build"
-XCFRAMEWORK_DIR="${BUILD_DIR}/${FRAMEWORK_NAME}.xcframework"
+rm -rf build
 
-# Clean up previous builds
-rm -rf "${BUILD_DIR}"
-mkdir -p "${BUILD_DIR}"
+mkdir -p archives
+mkdir -p build
 
-# Build for iOS device
-xcodebuild archive \
-  -scheme "${FRAMEWORK_NAME}" \
+xcodebuild docbuild \
+  -scheme JFramework \
   -destination "generic/platform=iOS" \
-  -archivePath "${BUILD_DIR}/iOS.xcarchive" \
-  -sdk iphoneos \
-  SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  -quiet
 
-# Build for iOS Simulator
 xcodebuild archive \
-  -scheme "${FRAMEWORK_NAME}" \
-  -destination "generic/platform=iOS Simulator" \
-  -archivePath "${BUILD_DIR}/iOSSimulator.xcarchive" \
-  -sdk iphonesimulator \
+  -project JFramework.xcodeproj \
+  -scheme JFramework \
+  -configuration Release \
+  -destination "generic/platform=iOS" \
+  -archivePath "archives/JFramework-iOS" \
   SKIP_INSTALL=NO \
   BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
-# Create XCFramework
+xcodebuild docbuild \
+  -scheme JFramework \
+  -destination "generic/platform=iOS Simulator" \
+  -quiet
+
+xcodebuild archive \
+  -project JFramework.xcodeproj \
+  -scheme JFramework \
+  -configuration Release \
+  -destination "generic/platform=iOS Simulator" \
+  -archivePath "archives/JFramework-iOS_Simulator" \
+  SKIP_INSTALL=NO \
+  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+
 xcodebuild -create-xcframework \
-  -framework "${BUILD_DIR}/iOS.xcarchive/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework" \
-  -framework "${BUILD_DIR}/iOSSimulator.xcarchive/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework" \
-  -output "${XCFRAMEWORK_DIR}"
+  -archive archives/JFramework-iOS.xcarchive -framework JFramework.framework \
+  -archive archives/JFramework-iOS_Simulator.xcarchive -framework JFramework.framework \
+  -output build/JFramework.xcframework
 
-# Cleanup intermediate archives
-rm -rf "${BUILD_DIR}/iOS.xcarchive" "${BUILD_DIR}/iOSSimulator.xcarchive"
-
-echo "XCFramework created at ${XCFRAMEWORK_DIR}"
+rm -rf archives
